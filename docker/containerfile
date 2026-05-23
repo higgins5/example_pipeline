@@ -1,11 +1,11 @@
 FROM jupyter/scipy-notebook 
 
 # copy analysis file 
-COPY /Users/higgins/Documents/UWGrad/Conferences_Apps_Projects/DAIR3/example_pipeline/analysis Unit5_cdc.ipynb 
+COPY analysis/Unit5_cdc.ipynb analysis/Unit5_cdc.ipynb
 
 # copy data 
-COPY /Users/higgins/Documents/UWGrad/Conferences_Apps_Projects/DAIR3/example_pipeline/data/1971.csv
+COPY data/1971.csv.gz data/1971.csv.gz
 
 # install any other packages needed 
-RUN python pip install 
+RUN pip install --no-cache-dir numpy plotly ipython
 
