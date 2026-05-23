@@ -1,0 +1,11 @@
+FROM jupyter/scipy-notebook 
+
+# copy analysis file 
+COPY /Users/higgins/Documents/UWGrad/Conferences_Apps_Projects/DAIR3/example_pipeline/analysis Unit5_cdc.ipynb 
+
+# copy data 
+COPY /Users/higgins/Documents/UWGrad/Conferences_Apps_Projects/DAIR3/example_pipeline/data/1971.csv
+
+# install any other packages needed 
+RUN python pip install 
+
